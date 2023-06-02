@@ -1,30 +1,30 @@
-from Entity.product import Product
+from Entity.coins import Coin
 
 
-class Basket:
-    def __init__(self, products=None):
-        if not products:
-            self.__products = []
+class Player1:
+    def __init__(self, name="User1", coins=None, size=30):
+        if not coins:
+            self.__coins = []
         else:
-            self.__products = products
+            self.__coins = coins
 
     @property
     def size(self):
-        return len(self.__products)
+        return len(self.__coins)
 
-    def get_product(self, index):
+    def get_coin(self, index):
         if (isinstance(index, int)
                 and index >= 0 and index < self.size):
-            return self.__products[index]
+            return self.__coins[index]
 
-    def add(self, product):
-        if isinstance(product, Product):
-            self.__products.append(product)
+    def add(self, coin):
+        if isinstance(coin, Coin):
+            self.__coins.append(coin)
 
     def __str__(self):
         msg = "List of products:"
 
         for i in range(self.size):
-            msg += f"\n{i + 1})" + str(self.__products[i])
+            msg += f"\n{i + 1})" + str(self.__coins[i])
 
         return msg
