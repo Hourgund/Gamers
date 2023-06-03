@@ -2,6 +2,7 @@ from Entity.bronze import Bronze
 from Entity.silver import Silver
 from Entity.gold import Gold
 from Containers.player_1 import Player1
+from Logic.score import Score
 
 
 def main():
