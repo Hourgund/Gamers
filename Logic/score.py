@@ -1,17 +1,17 @@
-from Entity.product import Product
-from Container.basket import Basket
+from Entity.coins import Coin
+from Containers.players import Players
 
 
-class ShopAssistance:
+class Score:
     @staticmethod
-    def calculate_total_price(basket):
-        if isinstance(basket, Basket) and basket.size != 0:
+    def calculate_total_price(player):
+        if isinstance(player, Players) and player.size != 0:
             total = 0
-            for i in range(basket.size):
-                product = basket.get_product(i)
+            for i in range(player.size):
+                coins = player.get_coin(i)
 
-                if isinstance(product, Product):
-                    total += product.price
+                if isinstance(coins, Coin):
+                    total += coins.price
 
             return total
         else:
