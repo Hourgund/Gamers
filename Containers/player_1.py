@@ -1,16 +1,10 @@
+from Containers.players import Players
 from Entity.coins import Coin
 
 
-class Player1:
-    def __init__(self, name="User1", coins=None, size=30):
-        if not coins:
-            self.__coins = []
-        else:
-            self.__coins = coins
-
-    @property
-    def size(self):
-        return len(self.__coins)
+class Player1(Players):
+    def __init__(self, name="User1", coin=None, size=30):
+        super().__init__(size)
 
     def get_coin(self, index):
         if (isinstance(index, int)
@@ -22,7 +16,7 @@ class Player1:
             self.__coins.append(coin)
 
     def __str__(self):
-        msg = "List of products:"
+        msg = "List of coins:"
 
         for i in range(self.size):
             msg += f"\n{i + 1})" + str(self.__coins[i])

@@ -7,4 +7,4 @@ class Silver(Coin):
 
     def __str__(self):
         return (f"Silver coin: weight = {self.weight},"
-                f"Price = {self.price}point")
+                f"Price = {self.price} point")
