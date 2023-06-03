@@ -2,11 +2,10 @@ from Entity.coins import Coin
 
 
 class Bronze(Coin):
-    def __init__(self, price=1, diameter=1):
-        super().__init__(price, diameter)
+    def __init__(self, price=1, weight=1):
+        super().__init__(price, weight)
 
-        self.__diameter = diameter if diameter > 0 else 100
 
     def __str__(self):
-        return (f"Bronze: Diameter = {self.diameter},"
+        return (f"Bronze coin: weight = {self.weight},"
                 f" Price = {self.price} point")

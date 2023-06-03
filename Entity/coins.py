@@ -1,7 +1,7 @@
 class Coin:
-    def __init__(self, price=0, diameter=1):
+    def __init__(self, price=0, weight=1):
         self.__price = price if isinstance(price, (int, float)) and price > 0 else 0
-        self.__diameter = diameter if diameter > 0 else 100
+        self.__weight = weight if weight > 0 else 100
 
     @property
     def price(self):
@@ -13,10 +13,10 @@ class Coin:
             self.__price = price
 
     @property
-    def diameter(self):
-        return self.__diameter
+    def weight(self):
+        return self.__weight
 
-    @diameter.setter
-    def diameter(self, diameter):
-        if diameter > 0:
-            self.__diameter = diameter
+    @weight.setter
+    def diameter(self, weight):
+        if weight > 0:
+            self.__weight = weight
