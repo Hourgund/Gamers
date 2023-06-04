@@ -3,6 +3,7 @@ from Entity.silver import Silver
 from Entity.gold import Gold
 from Containers.player import Players
 from Logic.score import Score
+from Logic.table_of_leaders import Table
 
 
 def main():
@@ -26,6 +27,8 @@ def main():
     total = Score.calculate_total_price(player)
 
     print(f"Total price = {total}")
+
+    Min_total = Table.find_min_total()
 
 if __name__ == "__main__":
     main()
