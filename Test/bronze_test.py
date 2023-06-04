@@ -41,15 +41,13 @@ class BronzeTest(unittest.TestCase):
     def test_weight_property_negative_bronze(self):
         bronze = Bronze()
         expected = bronze.weight
-
         bronze.weight = -20
-
         self.assertEqual(expected, bronze.weight)
 
     def test_weight_property_positive_bronze(self):
         bronze = Bronze()
-        expected = 200
-        bronze.weight = 10
+        expected = 10
+        bronze.weight = 8
         self.assertEqual(expected, bronze.weight)
 
     def test_weight_property_with_zero_bronze(self):

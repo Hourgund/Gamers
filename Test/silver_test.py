@@ -46,8 +46,8 @@ class SilverTest(unittest.TestCase):
 
     def test_weight_property_positive_silver(self):
         silver = Silver()
-        expected = 200
-        silver.weight = 10
+        expected = 15
+        silver.weight = 13
         self.assertEqual(expected, silver.weight)
 
     def test_weight_property_with_zero_silver(self):
