@@ -17,7 +17,7 @@ class BronzeTest(unittest.TestCase):
 
         bronze = Bronze(expected_weight, expected_price)
 
-        self.assertEqual(expected_weight, bronze.diameter)
+        self.assertEqual(expected_weight, bronze.weight)
         self.assertEqual(expected_price, bronze.price)
 
     def test_negative_weight_bronze(self):
@@ -38,7 +38,7 @@ class BronzeTest(unittest.TestCase):
         bronze = Bronze(price=price)
         self.assertEqual(expected, bronze.bronze)
 
-    def test_weight_property_negative(self):
+    def test_weight_property_negative_bronze(self):
         bronze = Bronze()
         expected = bronze.weight
 
@@ -46,13 +46,13 @@ class BronzeTest(unittest.TestCase):
 
         self.assertEqual(expected, bronze.weight)
 
-    def test_weight_property_positive(self):
+    def test_weight_property_positive_bronze(self):
         bronze = Bronze()
         expected = 200
         bronze.weight = 10
         self.assertEqual(expected, bronze.weight)
 
-    def test_weight_property_with_zero(self):
+    def test_weight_property_with_zero_bronze(self):
         bronze = Bronze()
         expected = bronze.weight
         bronze.weight = 0
