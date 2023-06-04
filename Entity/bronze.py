@@ -1,4 +1,4 @@
-from Entity.coins import Coin
+from Entity.coin import Coin
 
 
 class Bronze(Coin):

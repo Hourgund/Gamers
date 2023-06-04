@@ -1,4 +1,4 @@
-from Containers.players import Players
+from Containers.player import Players
 from Logic.score import Score
 
 
