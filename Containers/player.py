@@ -26,7 +26,6 @@ class Players:
         if isinstance(coins, list):
             self.__coins = coins
 
-
     @property
     def size(self):
         return len(self.coins)
@@ -47,5 +46,3 @@ class Players:
             msg += f"\n{i + 1})" + str(self.__coins[i])
 
         return msg
-
-

@@ -4,7 +4,7 @@ from Containers.player import Players
 
 class Score:
     @staticmethod
-    def calculate_total_price_first_player(player):
+    def calculate_total_price(player):
         if isinstance(player, Players) and player.size != 0:
             first_total = 0
             for i in range(player.size):

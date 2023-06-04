@@ -23,7 +23,6 @@ def main():
 
     print(player)
 
-
     total = Score.calculate_total_price(player)
 
     print(f"Total price = {total}")
