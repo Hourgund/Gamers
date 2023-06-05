@@ -2,7 +2,7 @@ from Entity.coin import Coin
 
 
 class Players:
-    def __init__(self, name="No name", coins=None):
+    def __init__(self, name="No name", coins=None, size=30):
         if not coins:
             self.__coins = []
         else:

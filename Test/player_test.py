@@ -1,5 +1,6 @@
 import unittest
 from Containers.player import Players
+from Entity.coin import Coin
 
 
 class PlayersTest(unittest.TestCase):
@@ -11,32 +12,32 @@ class PlayersTest(unittest.TestCase):
         self.assertEqual(expected_name, player.name)
         self.assertEqual(expected_coins, player.coins)
 
-    def test_bronze_constructor_with_args(self):
-        expected_weight = 10
-        expected_price = 5
+    def test_player_constructor_with_args(self):
+        expected_name = "Alex"
+        expected_coins = [Coin.price, Coin.weight]
 
-        bronze = Bronze(expected_weight, expected_price)
+        player = Players(expected_name, expected_coins)
 
-        self.assertEqual(expected_weight, bronze.weight)
-        self.assertEqual(expected_price, bronze.price)
+        self.assertEqual(expected_name, player.name)
+        self.assertEqual(expected_coins, player.coins)
 
-    def test_negative_weight_bronze(self):
-        weight = -10
-        expected = 10
-        bronze = Bronze(weight=weight)
-        self.assertEqual(expected, bronze.weight)
+    def test_int_name_player(self):
+        name = 14
+        expected = "No nmae"
+        player = Players(name=name)
+        self.assertEqual(expected, player.name)
 
-    def test_zero_weight_bronze(self):
-        weight = 0
-        expected = 0
-        bronze = Bronze(weight=weight)
-        self.assertEqual(expected, bronze.weight)
+    def test_no_name_player(self):
+        name = None
+        expected = "No name"
+        player = Players(name=name)
+        self.assertEqual(expected, player.name)
 
-    def test_zero_price_bronze(self):
-        price = 0
-        expected = 0
-        bronze = Bronze(price=price)
-        self.assertEqual(expected, bronze.bronze)
+    def test_zero_coins_player(self):
+        coins = None
+        expected = None
+        player = Players(coins=coins)
+        self.assertEqual(expected, player.coins)
 
     def test_weight_property_negative_bronze(self):
         bronze = Bronze()

@@ -17,6 +17,6 @@ class Coin:
         return self.__weight
 
     @weight.setter
-    def diameter(self, weight):
+    def weight(self, weight):
         if weight > 0:
             self.__weight = weight
