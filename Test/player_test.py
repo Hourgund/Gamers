@@ -28,7 +28,7 @@ class PlayersTest(unittest.TestCase):
         self.assertEqual(expected, player.name)
 
     def test_no_name_player(self):
-        name = None
+        name = ""
         expected = "No name"
         player = Players(name=name)
         self.assertEqual(expected, player.name)
@@ -39,23 +39,23 @@ class PlayersTest(unittest.TestCase):
         player = Players(coins=coins)
         self.assertEqual(expected, player.coins)
 
-    def test_weight_property_negative_bronze(self):
-        bronze = Bronze()
-        expected = bronze.weight
-        bronze.weight = -20
-        self.assertEqual(expected, bronze.weight)
+    def test_name_property_int_name(self):
+        player = Players()
+        expected = player.name
+        player.name = 20
+        self.assertEqual(expected, player.name)
 
-    def test_weight_property_positive_bronze(self):
-        bronze = Bronze()
-        expected = 10
-        bronze.weight = 8
-        self.assertEqual(expected, bronze.weight)
+    def test_name_property_player(self):
+        player = Players()
+        expected = "Alex"
+        player.name = "Alex"
+        self.assertEqual(expected, player.name)
 
-    def test_weight_property_with_zero_bronze(self):
-        bronze = Bronze()
-        expected = bronze.weight
-        bronze.weight = 0
-        self.assertEqual(expected, bronze.weight)
+    def test_property_with_no_name_bronze(self):
+        player = Players()
+        expected = player.name
+        player.name = ""
+        self.assertEqual(expected, player.name)
 
 
 if __name__ == "__main__":

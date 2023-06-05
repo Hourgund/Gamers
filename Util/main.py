@@ -37,6 +37,7 @@ def main():
     total2 = Score.calculate_total_price(player2)
 
     max_total = FirstPlace.find_max_total(total1)
+    max_total = FirstPlace.find_max_total(total2)
 
     print(f"Total price of first player = {total1}")
     print(f"Total price of second player = {total2}")
