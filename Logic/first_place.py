@@ -1,16 +1,16 @@
-from Containers.player import Players
 from Logic.score import Score
 
 
 class FirstPlace:
     @staticmethod
-    def find_max_total(total1):
+    def find_max_total(total):
         totals = []
-        max_total = 0
-        # highest result
-        for i in range(len(totals)):
-            total1 = totals[i]
-            if totals[i] > max_total:
+        for _ in range(len(totals)):
+            a = Score.calculate_total_price(totals)
+            totals.append(int(a))
+        max_total = totals[0]
+        for i in totals:
+            if max_total < total[i]:
                 max_total = totals[i]
 
         return max_total
