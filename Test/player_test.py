@@ -2,14 +2,14 @@ import unittest
 from Containers.player import Players
 
 
-class BronzeTest(unittest.TestCase):
-    def test_bronze_default_constructor(self):
-        bronze = Bronze()
-        expected_weight = 1
-        expected_price = 0
+class PlayersTest(unittest.TestCase):
+    def test_player_default_constructor(self):
+        player = Players()
+        expected_name = "No name"
+        expected_coins = None
 
-        self.assertEqual(expected_weight, bronze.weight)
-        self.assertEqual(expected_price, bronze.price)
+        self.assertEqual(expected_name, player.name)
+        self.assertEqual(expected_coins, player.coins)
 
     def test_bronze_constructor_with_args(self):
         expected_weight = 10
