@@ -3,7 +3,7 @@ from Entity.silver import Silver
 from Entity.gold import Gold
 from Containers.player import Players
 from Logic.score import Score
-from Logic.table_of_leaders import Table
+from Logic.first_place import FirstPlace
 
 
 def main():
