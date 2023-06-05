@@ -1,5 +1,3 @@
-from Util.main import main
-from Containers.player import Players
 from Logic.score import Score
 
 

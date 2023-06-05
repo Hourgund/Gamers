@@ -36,16 +36,14 @@ def main():
     total1 = Score.calculate_total_price(player1)
     total2 = Score.calculate_total_price(player2)
 
-    print(f"Total price = {total1}")
-    print(f"Total price = {total2}")
+    print(f"Total price of first player = {total1}")
+    print(f"Total price of second player = {total2}")
 
     totals = [total1, total2]
 
-    Minimum_total = Table.find_min_total(totals)
-    Maximum_total = Table.find_max_total(totals)
+    max_total = FirstPlace.find_max_total(totals)
 
-    print(f"The biggest resoult is ", Maximum_total)
-    print(f"The smallest resoult is ", Minimum_total)
+    print(f"The biggest result is ", max_total)
 
 
 if __name__ == "__main__":
