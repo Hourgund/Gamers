@@ -4,7 +4,9 @@ from Entity.gold import Gold
 from Containers.player import Players
 from Logic.score import Score
 from Logic.first_place import FirstPlace
-from operator import attrgetter
+
+
+# from operator import attrgetter
 
 
 def main():
@@ -34,16 +36,16 @@ def main():
 
     print(player)
 
-    total1 = Score.calculate_total_price(player1)
-    total2 = Score.calculate_total_price(player2)
+    score1 = Score.calculate_price_the_price_of_score(player1)
+    score2 = Score.calculate_price_the_price_of_score(player2)
 
-    print(f"Total price of first player = {total1}")
-    print(f"Total price of second player = {total2}")
+    print(f"Total price of first player = {score1}")
+    print(f"Total price of second player = {score2}")
 
-    totals = [total1, total2]
+    scores = (score1, score2)
     # max_total = max(totals)
-    max_total = FirstPlace.find_max_total(totals)
-    print(f"The biggest result is ", max_total)
+    max_score = FirstPlace.find_max_score(scores)
+    print(f"The biggest result is", max_score)
 
 
 if __name__ == "__main__":
